@@ -13,65 +13,161 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-  .block-container { padding-top: 2rem; padding-bottom: 2rem; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+  html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
+
+  .block-container { padding-top: 0 !important; padding-bottom: 3rem; max-width: 1100px; }
+
+  /* ── Hero banner ── */
+  .hero {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2D4A6B 60%, #3a6491 100%);
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-bottom: 32px;
+    color: white;
+  }
+  .hero h1 { font-size: 28px; font-weight: 700; margin: 0 0 6px; color: white; }
+  .hero p  { font-size: 15px; margin: 0; color: rgba(255,255,255,0.75); }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* ── Step label ── */
+  .step-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .step-num {
+    width: 26px; height: 26px;
+    background: #2D4A6B;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+  }
+
+  /* ── Person cards ── */
   .person-card {
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
     padding: 20px 16px;
     text-align: center;
     background: white;
-    height: 130px;
+    height: 138px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
-  .person-card.selected { border-color: #2D4A6B !important; background: #f0f4f8; }
-
+  .person-card.selected {
+    border-color: #2D4A6B !important;
+    background: linear-gradient(135deg, #f0f5fb, #e8f0f8);
+    box-shadow: 0 4px 16px rgba(45,74,107,0.15);
+  }
   .avatar {
-    width: 44px; height: 44px;
+    width: 46px; height: 46px;
     border-radius: 50%;
+    font-size: 17px; font-weight: 700; color: white;
+    margin: 0 auto 9px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 18px; font-weight: bold; color: white;
-    margin: 0 auto 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
-  .person-name { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
-  .person-role { color: #666; font-size: 12px; }
+  .person-name { font-weight: 600; font-size: 13.5px; color: #1e293b; margin-bottom: 3px; }
+  .person-role { color: #64748b; font-size: 11.5px; }
+  .selected-tick {
+    font-size: 11px; color: #2D4A6B; font-weight: 600; margin-top: 5px;
+  }
 
+  /* ── Template cards ── */
   .template-card {
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 14px;
     background: white;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
-  .template-card.selected { border-color: #2D4A6B !important; background: #f0f4f8; }
-  .template-name { font-weight: 600; font-size: 14px; margin-top: 8px; margin-bottom: 2px; }
-  .template-desc { color: #666; font-size: 12px; }
-
-  .step-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-bottom: 10px;
+  .template-card.selected {
+    border-color: #2D4A6B !important;
+    background: linear-gradient(135deg, #f0f5fb, #e8f0f8);
+    box-shadow: 0 4px 16px rgba(45,74,107,0.15);
   }
+  .template-name {
+    font-weight: 600; font-size: 14px; color: #1e293b;
+    margin-top: 10px; margin-bottom: 3px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .template-desc { color: #64748b; font-size: 11.5px; }
 
+  /* ── Overleaf buttons ── */
   .overleaf-btn {
-    display: inline-block;
-    background: #4CAF88;
+    display: block;
+    background: linear-gradient(135deg, #10b981, #059669);
     color: white !important;
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 12px 20px;
+    border-radius: 10px;
     text-decoration: none !important;
     font-weight: 600;
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(16,185,129,0.3);
+    transition: opacity 0.2s;
   }
-  .overleaf-btn:hover { background: #3d9970; }
+  .overleaf-btn:hover { opacity: 0.9; }
 
-  div[data-testid="stButton"] button { border-radius: 8px; }
+  /* ── Result cards ── */
+  .result-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  }
+  .result-title {
+    font-size: 15px; font-weight: 700; color: #1e293b;
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  /* ── Streamlit button overrides ── */
+  div[data-testid="stButton"] button {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.15s;
+  }
+  div[data-testid="stButton"] button[kind="primary"] {
+    background: linear-gradient(135deg, #2D4A6B, #3a6491) !important;
+    border: none !important;
+    font-size: 15px !important;
+    padding: 14px !important;
+    box-shadow: 0 4px 14px rgba(45,74,107,0.35) !important;
+  }
+
+  /* ── Divider ── */
+  hr { border-color: #f1f5f9 !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -85,14 +181,18 @@ if "results" not in st.session_state:
     st.session_state.results = None
 
 
-# ── Header ──────────────────────────────────────────────────────────────
-st.markdown("## 📄 CV & Cover Letter Generator")
-st.markdown("Select a person, paste the job description, pick a template — get a polished CV and cover letter ready for Overleaf.")
-st.divider()
+# ── Hero ────────────────────────────────────────────────────────────────
+st.markdown("""
+<div class="hero">
+  <div class="hero-badge">✦ Powered by Claude Sonnet 4.6</div>
+  <h1>CV & Cover Letter Generator</h1>
+  <p>Select a person · paste a job description · pick a style — get an ATS-optimised CV and tailored cover letter, ready to compile in Overleaf.</p>
+</div>
+""", unsafe_allow_html=True)
 
 
 # ── Step 1: Select Person ────────────────────────────────────────────────
-st.markdown('<div class="step-label">Step 1 — Select Person</div>', unsafe_allow_html=True)
+st.markdown('<div class="step-label"><div class="step-num">1</div><div class="step-title">Select Person</div></div>', unsafe_allow_html=True)
 
 person_cols = st.columns(3)
 for i, (name, data) in enumerate(RESUMES.items()):
@@ -100,11 +200,13 @@ for i, (name, data) in enumerate(RESUMES.items()):
         is_selected = st.session_state.selected_person == name
         card_class = "person-card selected" if is_selected else "person-card"
         initials = "".join(p[0] for p in name.split()[:2]).upper()
+        tick = '<div class="selected-tick">✓ Selected</div>' if is_selected else ""
         st.markdown(f"""
         <div class="{card_class}">
           <div class="avatar" style="background:{data['avatar_color']}">{initials}</div>
           <div class="person-name">{name.split()[0]} {name.split()[-1]}</div>
           <div class="person-role">{data['role']}</div>
+          {tick}
         </div>
         """, unsafe_allow_html=True)
         if st.button("Select" if not is_selected else "✓ Selected", key=f"person_{i}", use_container_width=True):
@@ -141,17 +243,18 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 
 # ── Step 2: Select Template ──────────────────────────────────────────────
-st.markdown('<div class="step-label">Step 2 — Choose Template Style</div>', unsafe_allow_html=True)
+st.markdown('<div class="step-label"><div class="step-num">2</div><div class="step-title">Choose Template Style</div></div>', unsafe_allow_html=True)
 
 tmpl_cols = st.columns(3)
 for i, (tname, tdata) in enumerate(TEMPLATES.items()):
     with tmpl_cols[i]:
         is_sel = st.session_state.selected_template == tname
         card_class = "template-card selected" if is_sel else "template-card"
+        tick = " ✓" if is_sel else ""
         st.markdown(f"""
         <div class="{card_class}">
           {tdata['preview_html']}
-          <div class="template-name">{tname}</div>
+          <div class="template-name">{tname}{tick}</div>
           <div class="template-desc">{tdata['description']}</div>
         </div>
         """, unsafe_allow_html=True)
@@ -211,7 +314,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 
 # ── Step 3: Job Description ──────────────────────────────────────────────
-st.markdown('<div class="step-label">Step 3 — Paste Job Description</div>', unsafe_allow_html=True)
+st.markdown('<div class="step-label"><div class="step-num">3</div><div class="step-title">Paste Job Description</div></div>', unsafe_allow_html=True)
 job_description = st.text_area(
     label="",
     height=220,
@@ -273,6 +376,18 @@ with st.sidebar:
     cloudinary_ready = bool(cloud_name and cloud_preset)
     if not cloudinary_ready:
         st.error("Cloudinary is required to generate Overleaf links.")
+
+    # Google Sheet quick link
+    _sheet_id = st.secrets.get("GOOGLE_SHEET_ID", "")
+    if _sheet_id and _sheet_id != "paste-your-sheet-id-here":
+        st.markdown("---")
+        st.markdown(
+            f'<a href="https://docs.google.com/spreadsheets/d/{_sheet_id}" target="_blank" '
+            f'style="display:block;background:#1a73e8;color:white;text-align:center;'
+            f'padding:9px 12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:13px;">'
+            f'📊 Open Generation Log</a>',
+            unsafe_allow_html=True
+        )
 
 
 # ── Generate Button ──────────────────────────────────────────────────────
@@ -374,19 +489,24 @@ if generate_clicked:
 # ── Results (rendered from session_state — persists across reruns/downloads) ─
 if st.session_state.results:
     r = st.session_state.results
-    st.success(f"Generated for **{r['person']}** using the **{r['template']}** template.")
-    st.divider()
+    st.markdown(f"""
+    <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #86efac;border-radius:12px;padding:14px 20px;margin-bottom:20px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:20px">✅</span>
+      <span style="font-weight:600;color:#166534">Generated for {r['person']} &nbsp;·&nbsp; {r['template']} template</span>
+    </div>
+    """, unsafe_allow_html=True)
 
-    col_resume, col_cover = st.columns(2)
+    col_resume, col_cover = st.columns(2, gap="medium")
 
     with col_resume:
-        st.markdown("### 📋 Optimised CV / Resume")
-        with st.expander("Preview optimised text", expanded=False):
+        st.markdown('<div class="result-card">', unsafe_allow_html=True)
+        st.markdown('<div class="result-title">📋 Optimised CV / Resume</div>', unsafe_allow_html=True)
+        with st.expander("Preview optimised text"):
             st.text(r["optimized_resume"])
-        with st.expander("View LaTeX code", expanded=False):
+        with st.expander("View LaTeX source"):
             st.code(r["resume_latex"], language="latex")
-
-        st.markdown(f'<a class="overleaf-btn" href="{r["resume_overleaf"]}" target="_blank">📝 Open Resume in Overleaf</a>', unsafe_allow_html=True)
+        st.markdown(f'<a class="overleaf-btn" href="{r["resume_overleaf"]}" target="_blank">📝 Open in Overleaf</a>', unsafe_allow_html=True)
+        st.markdown("<div style='margin-top:8px'>", unsafe_allow_html=True)
         st.download_button(
             label="⬇️ Download resume.tex",
             data=r["resume_latex"].encode("utf-8"),
@@ -395,15 +515,17 @@ if st.session_state.results:
             use_container_width=True,
             key="dl_resume"
         )
+        st.markdown('</div></div>', unsafe_allow_html=True)
 
     with col_cover:
-        st.markdown("### ✉️ Cover Letter")
-        with st.expander("Preview cover letter text", expanded=False):
+        st.markdown('<div class="result-card">', unsafe_allow_html=True)
+        st.markdown('<div class="result-title">✉️ Cover Letter</div>', unsafe_allow_html=True)
+        with st.expander("Preview cover letter text"):
             st.text(r["cover_letter"])
-        with st.expander("View LaTeX code", expanded=False):
+        with st.expander("View LaTeX source"):
             st.code(r["cover_latex"], language="latex")
-
-        st.markdown(f'<a class="overleaf-btn" href="{r["cover_overleaf"]}" target="_blank">📝 Open Cover Letter in Overleaf</a>', unsafe_allow_html=True)
+        st.markdown(f'<a class="overleaf-btn" href="{r["cover_overleaf"]}" target="_blank">📝 Open in Overleaf</a>', unsafe_allow_html=True)
+        st.markdown("<div style='margin-top:8px'>", unsafe_allow_html=True)
         st.download_button(
             label="⬇️ Download cover_letter.tex",
             data=r["cover_latex"].encode("utf-8"),
@@ -412,6 +534,7 @@ if st.session_state.results:
             use_container_width=True,
             key="dl_cover"
         )
+        st.markdown('</div></div>', unsafe_allow_html=True)
 
     st.divider()
     if st.button("🗑️ Clear results", use_container_width=False):
@@ -420,4 +543,11 @@ if st.session_state.results:
 
 
 # ── Footer ───────────────────────────────────────────────────────────────
-st.caption("Powered by Claude Sonnet 4.6 · Built with Streamlit · LaTeX compiled via Overleaf")
+_sheet_id = st.secrets.get("GOOGLE_SHEET_ID", "")
+sheet_link = f'&nbsp;·&nbsp; <a href="https://docs.google.com/spreadsheets/d/{_sheet_id}" target="_blank" style="color:#64748b;text-decoration:none;">📊 Generation Log</a>' if _sheet_id and _sheet_id != "paste-your-sheet-id-here" else ""
+
+st.markdown(f"""
+<div style="text-align:center;color:#94a3b8;font-size:12px;padding:20px 0 8px;">
+  Powered by Claude Sonnet 4.6 &nbsp;·&nbsp; Built with Streamlit &nbsp;·&nbsp; LaTeX via Overleaf{sheet_link}
+</div>
+""", unsafe_allow_html=True)
