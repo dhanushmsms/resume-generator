@@ -325,11 +325,12 @@ job_description = st.text_area(
 # ── Optional extra instructions ──────────────────────────────────────────
 with st.expander("💬 Additional instructions for the AI (optional)", expanded=False):
     st.caption("Give Claude extra guidance — e.g. 'Emphasise Python skills', 'Make tone more formal', 'Target a senior-level role', 'Keep it under 400 words'.")
-    extra_instructions = st.text_area(
+    st.text_area(
         "Extra instructions",
         height=100,
         placeholder="e.g. Focus on data visualisation experience. Use a confident, direct tone. Highlight leadership.",
-        label_visibility="collapsed"
+        label_visibility="collapsed",
+        key="extra_instructions"
     )
 
 st.markdown("<br>", unsafe_allow_html=True)
@@ -395,7 +396,7 @@ selected_person_data = RESUMES[st.session_state.selected_person]
 active_resume_text   = st.session_state.get(f"resume_edit_{current_person}", selected_person_data["content"]).strip()
 active_resume_tmpl   = st.session_state.get(resume_tmpl_key, TEMPLATES[current_template]["resume"])
 active_cover_tmpl    = st.session_state.get(cover_tmpl_key,  TEMPLATES[current_template]["cover_letter"])
-extra_instr          = st.session_state.get("extra_instructions", "")
+extra_instr          = st.session_state.get("extra_instructions", "").strip()
 
 generate_clicked = st.button(
     f"✨ Generate CV + Cover Letter for {current_person.split()[0]}",
@@ -423,7 +424,7 @@ if generate_clicked:
             resume_text=active_resume_text,
             job_description=job_description,
             api_key=anthropic_key,
-            extra_instructions=extra_instructions if extra_instructions.strip() else ""
+            extra_instructions=extra_instr
         )
 
         progress_bar.progress(45, text="Converting resume to LaTeX...")
