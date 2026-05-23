@@ -80,56 +80,81 @@ English - Fluent | Hindi - Advanced
 
     "Kumudha B S": {
         "name": "Kumudha B S",
-        "email": "kumudha.2k@gmail.com",
-        "phone": "(+91) 8970852106",
+        "email": "Kumudha.2k@gmail.com",
+        "phone": "8970852106",
         "location": "Bangalore, India",
-        "linkedin": "https://www.linkedin.com/in/kumudha-begur-subraman",
+        "linkedin": "https://www.linkedin.com/in/kumudha-begur-subramanya-226554320",
         "website": "",
         "github": "",
-        "role": "Operations Executive / Data Analyst",
+        "role": "Data Analyst",
         "avatar_color": "#1B5E7B",
         "content": """
-KUMUDHA B S
-Bangalore, India | (+91) 8970852106 | kumudha.2k@gmail.com
-LinkedIn: https://www.linkedin.com/in/kumudha-begur-subraman
+KUMUDHA BS
+Kumudha.2k@gmail.com | 8970852106 | www.linkedin.com/in/kumudha-begur-subramanya-226554320
 
-SUMMARY
-Analytical BBA graduate with 1+ year of experience in data auditing, classification validation, and operational reporting. Enhanced reporting efficiency by 30% through automated Excel and Python workflows, supporting 1000+ daily entries with 98% accuracy. Proven ability to optimize KPIs, resolve discrepancies, and uphold compliance standards in fast-paced environments. Recognized for precision, adaptability, and a proactive approach to continuous improvement.
+WORK EXPERIENCE
 
-EXPERIENCE
+Data Analyst – Fraud & Risk Management
+FRM Analytics, TeamLease – Flipkart
+- Analysed transactional datasets to detect fraud patterns and emerging risk trends, improving fraud detection efficiency by 80%.
+- Built SQL & Python-based analytics solutions to identify fraud hotspots and support real-time risk assessments.
+- Reduced escalations by 4% with data-driven insights through process optimisation and better handling of incidents.
+- Developed Power BI dashboards for fraud trend reporting and compliance tracking.
+- Collaborated with legal and compliance teams to ensure accurate and timely fraud reporting.
 
-Operations Executive (Data & Process Auditing), 11/2024 - current
-Flipkart, Bangalore
-- Perform daily audits of operational workflows to validate classification decisions (e.g., approvals or restrictions), identify discrepancies, and ensure compliance with process standards.
-- Create and maintain daily operational reports (morning files and closure reports) using Advanced Excel and Google Sheets for data cleaning, formatting, and performance tracking.
-- Automate routine reporting and data compilation tasks using Python (Pandas, openpyxl), increasing accuracy and saving manual effort.
-- Analyze trends in discrepancies and exceptions to identify root causes and recommend process improvements.
-- Coordinate with cross-functional teams to resolve operational inconsistencies and ensure alignment with internal policies.
-- Communicate updates and audit outcomes through structured email reports to stakeholders, ensuring visibility and accountability.
+Data Analyst & Dashboard Developer
+Canara
+- Designed and deployed a centralised KPI dashboard for the GO-AI team, enabling real-time project monitoring and analysis.
+- Utilised filter-driven visualisations to identify areas for process improvement, boosting operational KPIs.
+- Achieved 99.6% APL with an SPL of 14.5 seconds through SWOT analysis and targeted performance support.
+- Extracted operational metrics using MySQL and provided data-driven recommendations to improve associate performance.
+- Applied Python to learn and implement machine learning models and automate data workflows.
+
+Data Analyst Intern, Jun 2023 - Jul 2023
+KPMG
+- Conducted data quality assessments and prepared actionable insights reports.
+- Delivered presentations on data trends to stakeholders using visualization tools.
 
 EDUCATION
 
-Bachelor of Business Administration, 06/2019 - 06/2022
-Vidhyaashram First Grade College, Mysore, India
-Key Modules: Financial Management I & II, Business Management, Management of Banking & Insurance Services, Cost Accounting, Principles of Marketing, Corporate Accounting I & II, Income Tax I & II, Company Law and Secretarial Practice, Quantitative Techniques, Principles and Practice of General Insurance, Entrepreneurship Development, IFRS (IND-AS), Advanced Cost and Management Accounting I & II, Indirect Taxes I & II, Corporate Tax Planning, Principle and Practice of Auditing, Business Law, Business Research Methodology.
+Bachelor of Administration, Graduated 2022
+Vidhyaashram, Mysore
+
+Pre-University (Commerce), Passed out 2019
+Citizen Group of Institute, Nanjangud
+
+PROJECT EXPERIENCE
+
+US Retail Chain — Sales Overview Dashboard
+- Designed an interactive multi-page Power BI dashboard for sales tracking by department and category.
+- Configured KPI alerts, mobile-friendly layouts, and scheduled data refresh for real-time updates.
+
+Global Terrorism Dataset — Exploratory Data Analysis
+- Collected and processed large datasets from multiple sources using SQL, Web Scraping, and APIs.
+- Created Power BI models with Star & Snowflake schemas for advanced analytics.
+
+Personal Project — Python Web Scraper
+- Built a Flask-based web scraping application to extract and store product reviews in MySQL.
+- Performed ETL operations and visualised the results using Excel and Power BI.
+- Optimised data extraction processes to reduce runtime by 40%, facilitating faster insights into sales patterns and supporting strategic decision-making for inventory management.
 
 SKILLS
-Data Analysis | Advanced Excel | Google Sheets | Python (Pandas, NumPy, Matplotlib, openpyxl) | SQL (Basic to Intermediate) | Dashboard Reporting | Operations & Logistics Management | KPI Tracking | Performance Optimization | Data-Driven Decision Making | Project Management | Attention to Detail | Communication | Teamwork | Problem Solving | Time Management | Leadership
+Python (Pandas, NumPy, Matplotlib, Flask) | SQL | MySQL | MongoDB | Exploratory Data Analysis (EDA) | Data Wrangling | ETL | Data Modelling (Star & Snowflake Schemas) | Model Building | Data Preprocessing | Basic Web Scraping | Microsoft Power BI (Dataflows, Gateways, KPI Alerts) | Excel (Pivot Tables, Power Query) | Git | GitHub | MySQL Workbench | Flask API | Data Visualization | Stakeholder communication | Team leadership and collaboration
 
 CERTIFICATIONS
-- Ryan, LLC Property Tax Consulting – Forage (Skills: Microsoft Excel, Critical Thinking, Valuation Techniques, Excel Modeling)
-- Interior Designing, Sep 2023 – Sep 2024 – Forage (Skills: Sketch-up, Auto-Cad, Photoshop)
+- Exploratory Data Analysis, Coursera-IBM
+- Python for DataScience, Almabetter Edutech Pvt Ltd.
+- Data Analysis, Almabetter EduTech Pvt Ltd
+- Data Visualization, Almabetter EduTech Pvt Ltd
+- Introduction to Machine Learning, Coursera
+- Data Wrangling, Almabetter EduTech Pvt Ltd
 
-ACHIEVEMENTS
-- Winner, Badminton, Intra-College Fest Vidhyaashram: Successfully competed against 60 participants, showcasing strong focus, discipline, and determination.
-- Leader, College Project Team: Led a team of 5 in completing a complex project within tight deadlines, developing systematic problem-solving and attention to detail.
-- Class Representative: Acted as liaison between students and faculty, representing over 100 students; developed strong communication and organizational skills.
+LEADERSHIP EXPERIENCE
+- Isha Foundation — Volunteer, Event Coordination: Coordinated events and supported organizational activities.
+- Akshaya Foundation — Scribe Volunteer for Visually Impaired Students: Assisted visually impaired students by volunteering as a scribe during examinations and academic activities.
 
-HOBBIES AND INTERESTS
-Swimming and bowling; versatile performer excelling in dance and oration.
-
-LANGUAGES
-English - Fluent | Kannada - Fluent
+INTERESTS
+New Age technologies | Reading Research papers | Journaling | Classical instrumental music | Classical Dance
 """
     },
 
