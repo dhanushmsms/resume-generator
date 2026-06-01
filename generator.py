@@ -19,8 +19,15 @@ Given a resume and a job description, produce TWO outputs:
 - Rewrite/rephrase existing bullet points to match JD keywords naturally
 - Do NOT invent experience, metrics, or skills that aren't in the original
 - Keep all sections: Summary, Experience, Education, Skills, Certifications, Achievements
-- Use strong action verbs, keep it to 1 page worth of content
+- Use strong action verbs, keep it to 2 pages worth of content
 - Return plain text only, no LaTeX, no markdown
+
+=== LENGTH RULES (target TWO full pages) ===
+- Summary: 3-4 sentences, detailed and impactful
+- Each job role: 4-5 bullet points with metrics where possible
+- Include all roles and projects from the original resume
+- Skills: comprehensive, grouped by category
+- Certifications and achievements: include all
 
 === RULES FOR COVER LETTER ===
 - 3-4 paragraphs, professional tone
@@ -85,7 +92,12 @@ CRITICAL RULES:
 - Ensure the output is valid, compilable LaTeX
 - Do NOT include markdown code fences (no ```)
 - Do NOT include any explanation — output ONLY the LaTeX code
-- Keep the document to ONE PAGE
+
+TWO PAGE RULES:
+- The document should fill TWO pages — use all the content provided
+- Include every section, role, project, skill, and certification from the plain text
+- Use normal spacing — do not compress or shrink spacing to fit one page
+- If content naturally ends before 2 pages, add appropriate spacing to fill neatly
 
 LATEX TEMPLATE:
 {template}
