@@ -22,12 +22,16 @@ Given a resume and a job description, produce TWO outputs:
 - Use strong action verbs, keep it to 2 pages worth of content
 - Return plain text only, no LaTeX, no markdown
 
-=== LENGTH RULES (target TWO full pages) ===
+=== LENGTH RULES (target exactly TWO full pages, no more) ===
 - Summary: 3-4 sentences, detailed and impactful
 - Each job role: exactly 3 bullet points with metrics where possible
-- Include all roles and projects from the original resume
+- Projects: exactly 2 bullet points each
+- Dissertation: exactly 2 bullet points — most impactful ones only
 - Skills: comprehensive, grouped by category
-- Certifications and achievements: include all
+- Certifications: include all, names only, no descriptions
+- Achievements: maximum 1, kept to a single concise line
+- Languages: do NOT put on a separate section — append inline after Achievements as "Languages: English – Fluent, Hindi – Advanced"
+- Everything must fit within 2 pages — Achievements and Languages must sit at the bottom of page 2, not spill onto page 3
 
 === RULES FOR COVER LETTER ===
 - 3-4 paragraphs, professional tone
