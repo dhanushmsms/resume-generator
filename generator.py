@@ -24,7 +24,7 @@ Given a resume and a job description, produce TWO outputs:
 
 === LENGTH RULES (target TWO full pages) ===
 - Summary: 3-4 sentences, detailed and impactful
-- Each job role: 4-5 bullet points with metrics where possible
+- Each job role: exactly 3 bullet points with metrics where possible
 - Include all roles and projects from the original resume
 - Skills: comprehensive, grouped by category
 - Certifications and achievements: include all
