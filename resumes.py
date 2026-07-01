@@ -163,7 +163,7 @@ New Age technologies | Reading Research papers | Journaling | Classical instrume
         "email": "cinnyyy2002@gmail.com",
         "phone": "07587993262",
         "location": "Belfast, UK",
-        "linkedin": "https://www.linkedin.com/in/cindrellak-c-50a213201/",
+        "linkedin": "https://www.linkedin.com/in/cindrella-k-c-50a213201",
         "website": "",
         "github": "",
         "role": "Business Analyst / Data Analyst",
@@ -171,7 +171,7 @@ New Age technologies | Reading Research papers | Journaling | Classical instrume
         "content": """
 CINDRELLA KURINJERI CHANDROTH
 Belfast, UK | 07587993262 | cinnyyy2002@gmail.com
-LinkedIn: https://www.linkedin.com/in/cindrellak-c-50a213201/
+LinkedIn: https://www.linkedin.com/in/cindrella-k-c-50a213201
 
 PROFESSIONAL SUMMARY
 MSc graduate in Business Analytics with a strong analytical foundation in data analysis, machine learning, and AI-driven insights. Proficient in Power BI, Python, R, SQL, Qlik Sense, and Tableau to produce clear, accessible dashboards and reports that support operational efficiency and informed decision-making. Demonstrates strong leadership, problem-solving, and communication skills, with an understanding of Agile ways of working and a commitment to continuous learning and improvement.
