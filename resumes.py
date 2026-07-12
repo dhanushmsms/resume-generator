@@ -163,7 +163,7 @@ New Age technologies | Reading Research papers | Journaling | Classical instrume
         "email": "cinnyyy2002@gmail.com",
         "phone": "07587993262",
         "location": "Belfast, UK",
-        "linkedin": "https://www.linkedin.com/in/cindrella-k-c-50a213201",
+        "linkedin": "https://www.linkedin.com/in/cindrellakc/",
         "website": "",
         "github": "",
         "role": "Business Analyst / Data Analyst",
@@ -171,7 +171,7 @@ New Age technologies | Reading Research papers | Journaling | Classical instrume
         "content": """
 CINDRELLA KURINJERI CHANDROTH
 Belfast, UK | 07587993262 | cinnyyy2002@gmail.com
-LinkedIn: https://www.linkedin.com/in/cindrella-k-c-50a213201
+LinkedIn: https://www.linkedin.com/in/cindrellakc/
 
 PROFESSIONAL SUMMARY
 MSc graduate in Business Analytics with a strong analytical foundation in data analysis, machine learning, and AI-driven insights. Proficient in Power BI, Python, R, SQL, Qlik Sense, and Tableau to produce clear, accessible dashboards and reports that support operational efficiency and informed decision-making. Demonstrates strong leadership, problem-solving, and communication skills, with an understanding of Agile ways of working and a commitment to continuous learning and improvement.
@@ -185,6 +185,14 @@ BT Group, Belfast
 - Keep 100+ customer records current each week in the CRM system, maintaining perfect compliance with data protection rules and ensuring service histories stay accurate and audit-ready.
 - Build payment plans for 150+ overdue accounts that recover £30,000+ in revenue, spot high-risk cases early for quick action, and help reduce escalations by 25% using Excel, Outlook and One View.
 - Train and mentor new employees on billing systems, customer handling, and compliance processes, helping them reach full productivity faster and ensuring consistent service quality across the team.
+
+Business Analyst (Hybrid), 01/2023 - 07/2023
+Carl Jones Clothing Co., Kerala, India
+- Analysed production data across 2 manufacturing units with a combined capacity of 150 machines, identifying bottlenecks that improved operational efficiency.
+- Built Excel dashboards and visualisations to track 50+ production orders, helping management make faster, data-driven decisions.
+- Partnered with 15+ cross-functional staff across production, marketing, and operations to streamline manufacturing workflows.
+- Supported production planning for a 75-employee manufacturing unit, improving resource allocation and order scheduling.
+- Produced operational reports for garment manufacturing and export activities, supporting performance tracking and continuous process improvement.
 
 Intern, 05/2022 - 06/2022
 Elayavoor Service Co-operative Bank, Kannur, India
